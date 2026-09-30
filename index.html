@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fucked Up Levels List</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand"><img src="logo.png" alt="F.U.L.L. logo" /><span>Fucked Up Levels List</span></div>
+    <a class="admin-link" href="admin.html">Admin</a>
+  </header>
+
+  <main>
+    <section class="toolbar">
+      <div class="list-select">▼ Main List</div>
+      <input id="search" type="search" placeholder="Search by Name or Creator..." />
+      <select id="sort"><option value="rank">Sort by Rank</option><option value="name">Sort by Name</option><option value="creator">Sort by Creator</option></select>
+      <button id="reverse" title="Reverse order">↑</button>
+      <button id="gear" title="Admin" onclick="location.href='admin.html'">⚙</button>
+    </section>
+
+    <div class="hero">
+      <div><h1>Fucked Up Levels List</h1><p>Geometry Dash levels that deserve a place on the list.</p></div>
+    </div>
+
+    <section id="list" class="level-list"></section>
+    <div id="empty" class="empty" hidden>No levels have been added yet.</div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
